@@ -805,7 +805,6 @@
     margin-top: -30px;
   }
   .merch-description {
-    /* border: 2px solid white !important; */
     margin-left: 10px;
     height: 260px;
     max-width: 90%;
@@ -845,22 +844,7 @@
     font-size: 20px;
   }
   /*Main Section --> products*/
-  
-  @media (max-width: 768px) {
-  
-    nav {
-      flex-direction: column;
-      align-items: center;
-      display: block;
-      text-align: center;
-    }
-  
-    nav a {
-      display: block; 
-      width: 100%;
-      padding: 15px;
-    }
-  }
+
   /*information (above footer)*/
   .info {
     display: grid;
@@ -963,4 +947,1513 @@
     border-top: 3px solid #79707071;
   }
   /*footer*/
+
+  /*Media Querie*/
+ /* For tablets (screen width 768px or smaller) */
+@media screen and (max-width: 768px) {
+  /* Subgroup Section 2 */
+  .subgroup-con2 {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Reduce gap */
+    align-items: center; /* Center-align content */
+  }
+
+  .subgroup-title2 {
+    padding-left: 20px; /* Adjust padding */
+    text-align: center; /* Center the title for smaller screens */
+  }
+
+  .subgroup-con2 .subgroup-desc {
+    max-width: 100%; /* Allow full width */
+    padding: 10px;
+    text-align: center;
+  }
+
+  .subgroup-con2 .slider {
+    width: 100%; /* Make slider responsive */
+    height: auto; /* Preserve aspect ratio */
+    margin-left: 0; /* Reset margin */
+  }
+
+  .title2 {
+    font-size: 18px; /* Adjust font size */
+    margin-bottom: -10px;
+  }
+
+  /* ExIn Events Display */
+  .ExIn-Events-Display {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Adjust gap */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ExIn-Events {
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  .collapse-box {
+    width: 90%; /* Collapse box fits screen width */
+    margin: 20px auto; /* Center align the box */
+    padding: 15px;
+  }
+
+  .collapse-box[open] {
+    width: 100%; /* Expand to full screen width */
+    padding: 20px;
+  }
+
+  .toggle {
+    font-size: 14px; /* Adjust toggle text size */
+    padding-left: 10px;
+  }
+
+  /* New sections */
+  .content p {
+    font-size: 16px; /* Adjust paragraph font size for tablet */
+  }
+
+  .event-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content ul {
+    color: white;
+    padding-left: 75px;
+    margin: auto;
+  }
+
+  .content li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .clickable-slides {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .clickable-slides img {
+    width: 100%;
+    height: auto;
+  }
+
+  .click-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .click-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .clickable-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
+
+  .click-navbut {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .content-5 p {
+    font-size: 16px; /* Adjust paragraph font size for tablet */
+  }
+
+  .content-5 ul {
+    color: white;
+    padding-left: 40px; /* Less padding on tablet */
+    margin: auto;
+  }
+
+  .content-5 li {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-left: 0; /* Reset margin on tablet */
+  }
+
+  .content-5 .video {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px; /* Adjust video width */
+    height: 300px;
+    align-self: center;
+  }
+
+  video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* New slider section */
+  .slider {
+    width: 100%; /* Make slider responsive */
+    height: 300px; /* Adjust height for tablets */
+    justify-content: center; /* Center content */
+  }
+
+  .slides {
+    width: 300%; /* Keep the width for sliding effect */
+    display: flex;
+    animation: slide-animation 18s infinite;
+    animation-timing-function: ease;
+  }
+
+  .slide {
+    width: 100%; /* Ensure each slide takes full width */
+    flex-shrink: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbut {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height to fit content */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Reduced padding for tablets */
+  }
+
+  .contact-header {
+    font-size: 30px; /* Smaller font size for tablets */
+    margin-bottom: -20px;
+  }
+
+  .contact-mainSection {
+    flex-direction: column; /* Stack the sections vertically */
+    padding-top: 30px;
+  }
+
+  .contact-us {
+    width: 90%; /* Reduced width for tablets */
+    height: auto; /* Adjust height */
+    padding-left: 10px; /* Reduced padding */
+    flex-direction: column; /* Stack elements vertically */
+    margin-top: 20px;
+  }
+
+  .contact-us .information,
+  .contact-us-right {
+    width: 100%; /* Full width */
+    margin: 10px 0;
+  }
+
+  .info-type {
+    font-size: 20px; /* Smaller font size */
+  }
+
+  .contacter {
+    font-size: 18px; /* Smaller font size for contact info */
+    padding-left: 20px;
+  }
+
+  .email-or-form p {
+    margin-bottom: 20px; /* Adjust margin */
+  }
+
+  .about-top {
+    height: 250px; /* Adjust height for tablets */
+    background: linear-gradient(to bottom, black 50%, rgba(54, 69, 79, 0) 70%, #36454F 100%);
+  }
+
+  .about-on-top {
+    font-size: 22px; /* Smaller font size */
+  }
+
+  .about-bottom {
+    padding-bottom: 10px; /* Reduced padding for tablets */
+  }
+
+  .about-bottom-inside {
+    max-width: 90%; /* Adjust max-width */
+    margin: 0 20px;
+  }
+
+  .about-bottom-inside p {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .about-bottom-inside ul {
+    padding-left: 40px; /* Adjust padding */
+  }
+
+  .about-bottom-inside li {
+    padding-bottom: 20px; /* Reduced padding */
+  }
+
+  #about-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -100px;
+  }
+
+  .about-last-paragraph {
+    padding-top: 50px; /* Adjust padding */
+  }
+
+  .about-border {
+    padding-right: 150px; /* Reduced padding */
+  }
+
+  .about-positions {
+    padding-left: 15px; /* Reduced padding */
+  }
+
+  .about-positions header {
+    font-size: 22px; /* Smaller font size */
+    margin-bottom: -20px;
+  }
+
+  .about-positions-description header {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .about-positions-description p,
+  .about-positions-description li {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .club-information {
+    padding-top: 10px;
+    padding-right: 20px;
+    font-size: 14px;
+    width: 200px;
+  }
+
+  .club-information a {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Products section */
+  .products-header {
+    font-size: 28px; /* Adjust font size */
+    padding-left: 20px; /* Reduced padding */
+    height: 350px; /* Reduced height */
+  }
+
+  .products-header p {
+    margin-left: 0; /* Adjust left margin */
+    margin-top: -20px; /* Adjust margin */
+  }
+
+  .vsa-merch {
+    width: 400px; /* Adjust width */
+    height: auto;
+  }
+
+  .merch-group {
+    grid-template-columns: 1fr; /* Single column grid for mobile */
+    grid-template-rows: auto;
+    padding-left: 15px;
+  }
+
+  .merch-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .merch-description {
+    margin-left: 0;
+    margin-top: -10px;
+    height: 230px; /* Adjust height */
+  }
+
+  .merch-description header {
+    font-size: 16px; /* Adjust font size */
+    margin-left: 10px; /* Adjust left margin */
+  }
+
+  .merch-description h3 {
+    font-size: 20px; /* Adjust font size */
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+
+  .merch-description p {
+    margin-top: -20px; /* Adjust margin */
+  }
+
+  .size-options {
+    gap: 8px; /* Reduced gap */
+  }
+
+  .size-box {
+    width: 25px; /* Adjust size */
+    height: 25px;
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .merch-sale {
+    font-size: 18px; /* Adjust font size */
+    padding-top: 15px;
+  }
+
+  /* Info section */
+  .info {
+    grid-template-columns: 1fr; /* Single column grid layout */
+    padding-top: 60px; /* Adjusted padding */
+  }
+
+  .logo-container {
+    align-items: center;
+    text-align: center;
+    padding-top: 10px; /* Adjust padding */
+  }
+
+  .Logo_2 {
+    max-width: 250px; /* Adjust logo size */
+    width: 100%; /* Make logo responsive */
+    margin-top: 0; /* Reset margin */
+  }
+
+  .social-icons {
+    font-size: 2rem; /* Reduced icon size */
+    gap: 8px; /* Reduced gap */
+    margin-top: 15px; /* Adjusted spacing */
+  }
+
+  .mid-container {
+    padding-top: 30px; /* Reduced padding */
+  }
+
+  .lower-container {
+    padding-top: 40px; /* Reduced padding */
+  }
+
+  .hour-description {
+    font-size: 16px; /* Reduced font size */
+  }
+
+  .map-container {
+    padding-right: 20px; /* Adjusted padding */
+  }
+
+  .info h3, .info h1, .info p {
+    font-size: 18px; /* Adjust font size for headings */
+  }
+
+  .info h3, .info h1 {
+    margin-top: 20px; /* Adjust top margin */
+  }
+
+  .info p {
+    font-size: 16px; /* Reduced font size */
+    margin-top: -10px; /* Adjusted margin */
+  }
+
+  /* Footer text */
+  .foot p {
+    margin-top: 5px; /* Adjust margin */
+    font-size: 14px; /* Reduced font size */
+    color: #b8a3a3b8; /* Keep the same color */
+    border-top: 2px solid #79707071; /* Thinner border for smaller screens */
+  }
+
+  .body {
+    background-color: black;
+    padding: 0;
+  }
+
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Header adjustments */
+  .header {
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .Logo {
+    width: 20vw; /* Adjust logo size for tablets */
+  }
+
+  .header a {
+    font-size: 24px; /* Smaller font for navigation */
+    padding: 5px 15px;
+  }
+
+  .nav {
+    padding: 15px;
+  }
+
+  .nav a {
+    padding: 0px;
+  }
+
+  /* Home section adjustments */
+  .head {
+    font-size: 35px; /* Adjust font size for header */
+    padding-right: 5%;
+  }
+
+  p {
+    font-size: 20px; /* Smaller paragraph text for smaller screens */
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  }
+
+  .box img {
+    width: 100%; /* Make the image responsive */
+  }
+
+  .program-desc {
+    font-size: 18px; /* Adjust font size for descriptions */
+  }
+
+  .subgroup {
+    padding-left: 30px; /* Adjust subgroup padding */
+  }
+
+  .subgroup-con {
+    flex-direction: column; /* Stack items for mobile view */
+    gap: 10px;
+  }
+
+  .subgroup-desc {
+    max-width: 100%;
+  }
+
+  .subgroup header.subgroup-title {
+    font-size: 28px; /* Adjust subgroup title font size */
+  }
+}
+
+/* HERE */
+
+/* For mobile devices (screen width 480px or smaller) */
+@media screen and (max-width: 480px) {
+  /* Subgroup Section 2 */
+  .subgroup-con2 {
+    flex-direction: column; /* Stack elements */
+    gap: 5px;
+    align-items: center;
+  }
+
+  .subgroup-title2 {
+    font-size: 16px; /* Smaller font size for title */
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .subgroup-con2 .subgroup-desc {
+    max-width: 100%;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .subgroup-con2 .slider {
+    width: 100%; /* Full width on mobile */
+    height: auto;
+  }
+
+  .title2 {
+    font-size: 16px; /* Smaller font size */
+    margin-bottom: -5px;
+  }
+
+  /* ExIn Events Display */
+  .ExIn-Events-Display {
+    flex-direction: column; /* Stack vertically */
+    gap: 10px;
+  }
+
+  .ExIn-Events header {
+    font-size: 12px; /* Smaller header font size */
+    padding-left: 10px;
+  }
+
+  .collapse-box {
+    width: 95%; /* Expand to almost full width */
+    margin: 15px auto; /* Center align */
+    padding: 10px;
+  }
+
+  .toggle {
+    font-size: 12px; /* Reduce toggle text size */
+    padding-left: 5px;
+  }
+
+  .toggle::before {
+    left: 15px; /* Adjust arrow positioning */
+    top: 12px;
+  }
+
+  /* New sections */
+  .content p {
+    font-size: 14px; /* Smaller paragraph size for mobile */
+  }
+
+  .event-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content ul {
+    color: white;
+    padding-left: 50px; /* Less padding on mobile */
+    margin: auto;
+  }
+
+  .content li {
+    padding-bottom: 8px; /* Less padding on mobile */
+    padding-top: 8px;
+  }
+
+  .clickable-slides {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .clickable-slides img {
+    width: 100%;
+    height: auto;
+  }
+
+  .click-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .click-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .clickable-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Adjusted for mobile */
+    position: absolute;
+    bottom: 8px; /* Adjusted for mobile */
+    left: 0;
+    right: 0;
+  }
+
+  .click-navbut {
+    width: 12px; /* Adjust size */
+    height: 12px; /* Adjust size */
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .content-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-5 p {
+    font-size: 14px; /* Smaller paragraph size for mobile */
+  }
+
+  .content-5 ul {
+    color: white;
+    padding-left: 30px; /* Even less padding */
+    margin: auto;
+  }
+
+  .content-5 li {
+    padding-bottom: 6px; /* Reduced padding for mobile */
+    padding-top: 6px;
+    margin-left: 0; /* Reset margin */
+  }
+
+  .content-5 .video {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px; /* Smaller video width */
+    height: 250px;
+    align-self: center;
+  }
+
+  video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slider {
+    width: 100%; /* Full width on mobile */
+    height: 250px; /* Reduced height for mobile */
+    justify-content: center; /* Center content */
+  }
+
+  .slides {
+    width: 300%;
+    display: flex;
+    animation: slide-animation 18s infinite;
+    animation-timing-function: ease;
+  }
+
+  .slide {
+    width: 100%; /* Full width per slide */
+    flex-shrink: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(50%);
+    display: flex;
+    gap: 8px; /* Slightly smaller gap for mobile */
+  }
+
+  .navbut {
+    width: 12px;
+    height: 12px; /* Smaller navigation buttons */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact {
+    padding: 15px; /* Further reduced padding */
+  }
+
+  .contact-header {
+    font-size: 24px; /* Smaller font size for mobile */
+    margin-bottom: -15px;
+  }
+
+  .contact-mainSection {
+    flex-direction: column; /* Stack sections vertically */
+    padding-top: 20px;
+  }
+
+  .contact-us {
+    width: 100%; /* Full width on mobile */
+    padding-left: 5px; /* Minimal padding */
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  .contact-us .information,
+  .contact-us-right {
+    width: 100%; /* Full width */
+    margin: 5px 0;
+  }
+
+  .info-type {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .contacter {
+    font-size: 16px; /* Smaller font size */
+    padding-left: 15px;
+  }
+
+  .email-or-form p {
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  /* About section */
+  .about-top {
+    height: 200px; /* Adjust height for mobile */
+  }
+
+  .about-on-top {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .about-bottom {
+    padding-bottom: 5px; /* Reduced padding for mobile */
+  }
+
+  .about-bottom-inside {
+    max-width: 95%; /* Adjust max-width */
+    margin: 0 10px;
+  }
+
+  .about-bottom-inside p {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .about-bottom-inside ul {
+    padding-left: 20px; /* Adjust padding */
+  }
+
+  .about-bottom-inside li {
+    padding-bottom: 15px; /* Reduced padding */
+  }
+
+  #about-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -80px; /* Adjust image margin */
+  }
+
+  .about-last-paragraph {
+    padding-top: 40px; /* Adjust padding */
+  }
+
+  .about-border {
+    padding-right: 100px; /* Further reduced padding */
+  }
+
+  .about-positions {
+    padding-left: 10px; /* Reduced padding */
+  }
+
+  .about-positions header {
+    font-size: 18px; /* Smaller font size */
+    margin-bottom: -15px;
+  }
+
+  .about-positions-description header {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .about-positions-description p,
+  .about-positions-description li {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .club-information {
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 12px;
+    width: 180px;
+  }
+
+  .club-information a {
+    font-size: 12px; /* Smaller font size */
+  }
+
+   /* Products section */
+   .products-header {
+    font-size: 22px; /* Further reduced font size */
+    padding-left: 10px; /* Minimal padding */
+    height: 300px; /* Adjust height */
+  }
+
+  .products-header p {
+    margin-left: 0; /* Remove margin */
+    margin-top: 0; /* Reset margin */
+  }
+
+  .vsa-merch {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .merch-group {
+    grid-template-columns: 1fr; /* One column layout */
+    padding-left: 10px;
+  }
+
+  .merch-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .merch-description {
+    margin-left: 0;
+    margin-top: -10px;
+    height: 200px; /* Adjust height */
+  }
+
+  .merch-description header {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .merch-description h3 {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .merch-description p {
+    margin-top: -10px;
+  }
+
+  .size-options {
+    gap: 6px; /* Smaller gap */
+  }
+
+  .size-box {
+    width: 22px; /* Smaller size */
+    height: 22px;
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .merch-sale {
+    font-size: 16px; /* Smaller font size */
+    padding-top: 10px;
+  }
+
+  /* Info section */
+  .info {
+    grid-template-columns: 1fr; /* Single column grid layout */
+    padding-top: 40px; /* Adjusted padding */
+  }
+
+  .logo-container {
+    padding-top: 5px; /* Adjust padding */
+  }
+
+  .Logo_2 {
+    max-width: 200px; /* Further reduced logo size */
+    width: 100%; /* Make logo responsive */
+  }
+
+  .social-icons {
+    font-size: 1.5rem; /* Further reduced icon size */
+    gap: 6px; /* Smaller gap */
+    margin-top: 10px; /* Adjusted spacing */
+  }
+
+  .mid-container {
+    padding-top: 20px; /* Reduced padding */
+  }
+
+  .lower-container {
+    padding-top: 25px; /* Reduced padding */
+  }
+
+  .hour-description {
+    font-size: 14px; /* Further reduced font size */
+  }
+
+  .map-container {
+    padding-right: 10px; /* Adjusted padding */
+  }
+
+  .info h3, .info h1, .info p {
+    font-size: 16px; /* Reduced font size for headings */
+  }
+
+  .info h3, .info h1 {
+    margin-top: 15px; /* Adjusted top margin */
+  }
+
+  .info p {
+    font-size: 14px; /* Smaller font size */
+    margin-top: 0; /* Reset margin */
+  }
+
+  /* Footer text */
+  .foot p {
+    margin-top: 3px; /* Adjust margin */
+    font-size: 12px; /* Further reduced font size */
+    color: #b8a3a3b8; /* Keep the same color */
+    border-top: 1px solid #79707071; /* Even thinner border for mobile */
+  }
+
+   /* Header adjustments */
+   .header {
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .Logo {
+    width: 25vw; /* Further adjust logo size for small screens */
+  }
+
+  .header a {
+    font-size: 18px; /* Smaller navigation links */
+    padding: 5px 10px;
+  }
+
+  .nav {
+    padding: 10px;
+  }
+
+  .nav a {
+    padding: 0px;
+  }
+
+  /* Home section adjustments */
+  .head {
+    font-size: 28px; /* Smaller font size for the head */
+  }
+
+  p {
+    font-size: 18px; /* Adjust paragraph font for mobile screens */
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* Stack items for mobile */
+  }
+
+  .box img {
+    width: 100%; /* Ensure images are responsive */
+  }
+
+  .program-desc {
+    font-size: 16px; /* Further reduce font size for mobile */
+  }
+
+  .subgroup {
+    padding-left: 20px; /* Reduce subgroup padding */
+  }
+
+  .subgroup-con {
+    flex-direction: column; /* Stack items */
+  }
+
+  .subgroup-desc {
+    max-width: 100%;
+  }
+
+  .subgroup header.subgroup-title {
+    font-size: 24px; /* Reduce title size for mobile */
+  }
+}
+
+/*HERE*/
+
+/* For tiny devices (screen width 320px or smaller) */
+@media screen and (max-width: 320px) {
+  /* Subgroup Section 2 */
+  .subgroup-title2 {
+    font-size: 14px; /* Minimal size for title */
+  }
+
+  .subgroup-con2 .subgroup-desc {
+    font-size: 12px; /* Reduce text size */
+    padding: 5px;
+  }
+
+  .slider {
+    width: 100%; /* Full width slider */
+    height: auto;
+  }
+
+  .title2 {
+    font-size: 14px; /* Adjust title size */
+  }
+
+  /* ExIn Events Display */
+  .ExIn-Events header {
+    font-size: 10px; /* Smallest size for headers */
+    padding-left: 5px;
+  }
+
+  .collapse-box {
+    width: 100%; /* Full width collapse box */
+    margin: 10px auto;
+    padding: 5px;
+  }
+
+  .toggle {
+    font-size: 10px; /* Reduce toggle text further */
+    padding-left: 5px;
+  }
+
+  .toggle::before {
+    left: 10px; /* Adjust arrow for tiny screens */
+    top: 8px;
+  }
+
+  /* New sections */
+  .content p {
+    font-size: 12px; /* Small text size on tiny devices */
+  }
+
+  .event-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content ul {
+    color: white;
+    padding-left: 30px; /* Even less padding */
+    margin: auto;
+  }
+
+  .content li {
+    padding-bottom: 5px; /* Even smaller padding */
+    padding-top: 5px;
+  }
+
+  .clickable-slides {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .clickable-slides img {
+    width: 100%;
+    height: auto;
+  }
+
+  .click-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .click-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .clickable-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 6px; /* Adjust gap */
+    position: absolute;
+    bottom: 6px; /* Adjust position */
+    left: 0;
+    right: 0;
+  }
+
+  .click-navbut {
+    width: 10px; /* Adjust size */
+    height: 10px; /* Adjust size */
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .content-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-5 p {
+    font-size: 12px; /* Small text size on tiny devices */
+  }
+
+  .content-5 ul {
+    color: white;
+    padding-left: 20px; /* Minimal padding on tiny devices */
+    margin: auto;
+  }
+
+  .content-5 li {
+    padding-bottom: 4px; /* Even smaller padding */
+    padding-top: 4px;
+    margin-left: 0; /* Reset margin */
+  }
+
+  .content-5 .video {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 300px; /* Smaller video width */
+    height: 200px;
+    align-self: center;
+  }
+
+  video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .slider {
+    width: 100%; /* Full width for tiny screens */
+    height: 200px; /* Further reduce height */
+    justify-content: center;
+  }
+
+  .slides {
+    width: 300%;
+    display: flex;
+    animation: slide-animation 18s infinite;
+    animation-timing-function: ease;
+  }
+
+  .slide {
+    width: 100%; /* Ensure full width for tiny screens */
+    flex-shrink: 0;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(50%);
+    display: flex;
+    gap: 5px; /* Reduce gap even further */
+  }
+
+  .navbut {
+    width: 10px;
+    height: 10px; /* Smaller buttons for tiny screens */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .contact {
+    padding: 10px; /* Minimal padding for tiny screens */
+  }
+
+  .contact-header {
+    font-size: 20px; /* Very small font size for tiny screens */
+    margin-bottom: -10px;
+  }
+
+  .contact-mainSection {
+    flex-direction: column; /* Stack vertically */
+    padding-top: 15px;
+  }
+
+  .contact-us {
+    width: 100%; /* Full width on tiny screens */
+    padding-left: 0; /* No padding */
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .contact-us .information,
+  .contact-us-right {
+    width: 100%; /* Full width */
+    margin: 5px 0;
+  }
+
+  .info-type {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .contacter {
+    font-size: 14px; /* Very small font size */
+    padding-left: 10px;
+  }
+
+  .email-or-form p {
+    margin-bottom: 10px; /* Adjust margin */
+  }
+
+  .about-top {
+    height: 180px; /* Adjust height for tiny screens */
+  }
+
+  .about-on-top {
+    font-size: 16px; /* Very small font size */
+  }
+
+  .about-bottom {
+    padding-bottom: 0; /* No padding for tiny screens */
+  }
+
+  .about-bottom-inside {
+    max-width: 90%; /* Adjust max-width */
+    margin: 0 5px;
+  }
+
+  .about-bottom-inside p {
+    font-size: 14px; /* Very small font size */
+  }
+
+  .about-bottom-inside ul {
+    padding-left: 10px; /* Adjust padding */
+  }
+
+  .about-bottom-inside li {
+    padding-bottom: 10px; /* Reduced padding */
+  }
+
+  #about-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -50px; /* Adjust image margin */
+  }
+
+  .about-last-paragraph {
+    padding-top: 30px; /* Adjust padding */
+  }
+
+  .about-border {
+    padding-right: 50px; /* Minimal padding */
+  }
+
+  .about-positions {
+    padding-left: 5px; /* Reduced padding */
+  }
+
+  .about-positions header {
+    font-size: 14px; /* Very small font size */
+    margin-bottom: -10px;
+  }
+
+  .about-positions-description header {
+    font-size: 12px; /* Very small font size */
+  }
+
+  .about-positions-description p,
+  .about-positions-description li {
+    font-size: 14px; /* Very small font size */
+  }
+
+  .club-information {
+    padding-top: 2px;
+    padding-right: 5px;
+    font-size: 10px;
+    width: 150px;
+  }
+
+  .club-information a {
+    font-size: 10px; /* Very small font size */
+  }
+
+  /* Products section */
+  .products-header {
+    font-size: 18px; /* Very small font size */
+    padding-left: 5px; /* Minimal padding */
+    height: 250px; /* Further reduced height */
+  }
+
+  .products-header p {
+    margin-left: 0; /* Reset margin */
+    margin-top: 0; /* Reset margin */
+  }
+
+  .vsa-merch {
+    width: 100%; /* Full width for tiny devices */
+  }
+
+  .merch-group {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding-left: 5px;
+  }
+
+  .merch-img {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .merch-description {
+    margin-left: 0;
+    margin-top: -5px;
+    height: 180px; /* Further reduce height */
+  }
+
+  .merch-description header {
+    font-size: 12px; /* Very small font size */
+  }
+
+  .merch-description h3 {
+    font-size: 16px; /* Very small font size */
+  }
+
+  .merch-description p {
+    margin-top: -5px;
+  }
+
+  .size-options {
+    gap: 4px; /* Reduced gap */
+  }
+
+  .size-box {
+    width: 18px; /* Very small size */
+    height: 18px;
+    font-size: 10px; /* Very small font size */
+  }
+
+  .merch-sale {
+    font-size: 14px; /* Very small font size */
+    padding-top: 5px;
+  }
+
+  /* Info section */
+  .info {
+    grid-template-columns: 1fr; /* Single column grid layout */
+    padding-top: 30px; /* Adjusted padding */
+  }
+
+  .logo-container {
+    padding-top: 3px; /* Adjust padding */
+  }
+
+  .Logo_2 {
+    max-width: 180px; /* Very small logo size */
+  }
+
+  .social-icons {
+    font-size: 1.2rem; /* Very small icon size */
+    gap: 4px; /* Very small gap */
+    margin-top: 8px; /* Adjusted spacing */
+  }
+
+  .mid-container {
+    padding-top: 15px; /* Reduced padding */
+  }
+
+  .lower-container {
+    padding-top: 20px; /* Reduced padding */
+  }
+
+  .hour-description {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .map-container {
+    padding-right: 5px; /* Adjusted padding */
+  }
+
+  .info h3, .info h1, .info p {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .info h3, .info h1 {
+    margin-top: 10px; /* Reduced margin */
+  }
+
+  .info p {
+    font-size: 12px; /* Smaller font size */
+    margin-top: 0; /* Reset margin */
+  }
+
+  /* Footer text */
+  .foot p {
+    margin-top: 3px; /* Adjust margin */
+    font-size: 10px; /* Further reduced font size */
+    color: #b8a3a3b8; /* Keep the same color */
+    border-top: 1px solid #79707071; /* Maintain thin border */
+  }
+
+  /* Header adjustments */
+  .header {
+    height: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .Logo {
+    width: 30vw; /* Adjust logo size for tiny devices */
+  }
+
+  .header a {
+    font-size: 16px; /* Smaller font size for mobile */
+    padding: 5px 8px;
+  }
+
+  .nav {
+    padding: 5px;
+  }
+
+  .nav a {
+    padding: 0px;
+  }
+
+  /* Home section adjustments */
+  .head {
+    font-size: 24px; /* Smaller font size for head */
+  }
+
+  p {
+    font-size: 16px; /* Further reduce paragraph font size */
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* Stack items for smaller devices */
+  }
+
+  .box img {
+    width: 100%; /* Ensure image scaling on small screens */
+  }
+
+  .program-desc {
+    font-size: 14px; /* Adjust description font for small screens */
+  }
+
+  .subgroup {
+    padding-left: 15px; /* Further reduce padding */
+  }
+
+  .subgroup-con {
+    flex-direction: column; /* Stack items */
+  }
+
+  .subgroup-desc {
+    max-width: 100%;
+  }
+
+  .subgroup header.subgroup-title {
+    font-size: 20px; /* Further reduce title size */
+  }
+}
+  /*Media Querie*/
   
