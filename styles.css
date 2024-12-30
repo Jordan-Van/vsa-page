@@ -95,6 +95,9 @@
   /*Top Bar*/
 
   /*Main Section --> home*/
+  .home {
+    background: linear-gradient(-45deg, black 2%, rgba(255, 215, 0, 0.7) 25%, black 75%);
+  }
   .head {
     position: relative;
     display: inline-block;
@@ -132,10 +135,34 @@
     width: 700px;
   }
 
+  /*#ffd700 --> gold*/
   .program {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* background: linear-gradient(-45deg, black 64%, rgb(255, 215, 0, 0.7) 75.5%, black 100.5%);
+    background-size: 150%; */
+    /* background: linear-gradient(-45deg, black 56%, rgba(255, 215, 0, 0.7) 70%, black 100.3%); */
+  }
+
+  .program-background {
+    background: linear-gradient(-45deg, black 14.2%, rgba(255, 215, 0, 0.7) 42%, black 100.6%);
+  }
+
+  .subgroup-background3 {
+    background: linear-gradient(-45deg, black 37.9%, rgba(255, 215, 0, 0.7) 61.7%, black 110%);
+  }
+
+  .subgroup-background {
+    background: linear-gradient(45deg, black -8%, rgba(255, 215, 0, 0.7) 38.4%,black 62.2%);
+  }
+
+  .subgroup-background2 {
+    background: linear-gradient(45deg, black 18%, rgba(255, 215, 0, 0.7) 64.75%,black 88.4%);
+  }
+
+  .events {
+    background: linear-gradient(-45deg, black 16.2%, rgba(255, 215, 0, 0.7) 37.45%,black 82.9%);
   }
 
   .title {
@@ -471,7 +498,6 @@
     margin: auto;
     display: flex;
     justify-content: flex-end;
-
   }
 
   .slides {
@@ -572,11 +598,13 @@
   }
 
   .information {
+    width: 600px; 
+    height: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 375px;
   }
+
 
   .information textarea {
     margin-bottom: 30px;
@@ -588,7 +616,6 @@
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    padding-left: 200px;
   }
 
   .contacter {
@@ -679,7 +706,7 @@
     border-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)) 1;
     padding: 15px;
     margin-bottom: 20px;
-    padding-right: 200px;
+    padding-right: 100px;
   }
 
   .about-positions {
@@ -780,6 +807,8 @@
     row-gap: 40px;
     margin: auto;
     padding-left: 25px;
+    background: linear-gradient(to top, rgb(80, 200, 120, 0.8), black, rgb(80, 200, 120, 0.8), 
+                black, rgb(80, 200, 120, 0.8), black, rgb(80, 200, 120, 0.8), black);
   }
 
   .merch-img {
@@ -842,6 +871,7 @@
     padding: auto;
     padding-top: 25px;
     font-size: 20px;
+    background: linear-gradient(to bottom, rgb(80, 200, 120, 0.8) 35%, black 75%);
   }
   /*Main Section --> products*/
 
@@ -948,9 +978,29 @@
   }
   /*footer*/
 
+  /*---------------------------------------------------------------------------------------------------------------------------*/
   /*Media Querie*/
  /* For tablets (screen width 768px or smaller) */
 @media screen and (max-width: 768px) {
+  /*Background*/
+  .home {
+    background: linear-gradient(-45deg, black 5%, rgba(255, 215, 0, 0.7) 30%, black 70%);
+  }
+  .program-background {
+    background: linear-gradient(-45deg, black 10%, rgba(255, 215, 0, 0.7) 40%, black 90%);
+  }
+  .subgroup-background3 {
+    background: linear-gradient(-45deg, black 30%, rgba(255, 215, 0, 0.7) 60%, black 100%);
+  }
+  .subgroup-background {
+    background: linear-gradient(45deg, black -5%, rgba(255, 215, 0, 0.7) 35%, black 60%);
+  }
+  .subgroup-background2 {
+    background: linear-gradient(45deg, black 15%, rgba(255, 215, 0, 0.7) 60%, black 85%);
+  }
+  .events {
+    background: linear-gradient(-45deg, black 15%, rgba(255, 215, 0, 0.7) 35%, black 80%);
+  }
   /* Subgroup Section 2 */
   .subgroup-con2 {
     flex-direction: column; /* Stack elements vertically */
@@ -995,7 +1045,7 @@
   .collapse-box {
     width: 90%; /* Collapse box fits screen width */
     margin: 20px auto; /* Center align the box */
-    padding: 15px;
+    padding: 10px 15px;
   }
 
   .collapse-box[open] {
@@ -1009,6 +1059,11 @@
   }
 
   /* New sections */
+  .content, .content-5 {
+    margin-right: 20px;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
   .content p {
     font-size: 16px; /* Adjust paragraph font size for tablet */
   }
@@ -1017,6 +1072,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
   }
 
   .content ul {
@@ -1036,6 +1092,7 @@
     max-width: 640px;
     margin: 0 auto;
     overflow: hidden;
+    margin-left: -22px;
   }
 
   .clickable-slides img {
@@ -1111,21 +1168,30 @@
 
   /* New slider section */
   .slider {
-    width: 100%; /* Make slider responsive */
-    height: 300px; /* Adjust height for tablets */
-    justify-content: center; /* Center content */
+    width: 100%;
+    height: 300px;
+    padding: 0 10px; /* Add space on both sides */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
   }
 
   .slides {
-    width: 300%; /* Keep the width for sliding effect */
     display: flex;
-    animation: slide-animation 18s infinite;
+    justify-content: space-between; /* Space slides evenly */
+    width: calc(100% * 3); /* Adjust for 3 slides */
+    transition: transform 18s ease-in-out;
     animation-timing-function: ease;
   }
 
   .slide {
-    width: 100%; /* Ensure each slide takes full width */
-    flex-shrink: 0;
+    width: 100%;
+    padding: 0 10px; /* Add horizontal padding */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center;
   }
 
   .slide img {
@@ -1164,8 +1230,8 @@
   }
 
   .contact-header {
-    font-size: 30px; /* Smaller font size for tablets */
-    margin-bottom: -20px;
+    font-size: 26px; /* Adjust font size */
+    margin-bottom: 10px; /* Adjust bottom margin */
   }
 
   .contact-mainSection {
@@ -1174,30 +1240,45 @@
   }
 
   .contact-us {
-    width: 90%; /* Reduced width for tablets */
-    height: auto; /* Adjust height */
-    padding-left: 10px; /* Reduced padding */
-    flex-direction: column; /* Stack elements vertically */
+    width: 100%; /* Ensure full width for the form */
+    padding: 0 20px; /* Equal padding on left and right */
     margin-top: 20px;
+    height: auto;
+    flex-direction: column; /* Stack elements vertically */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
   }
 
   .contact-us .information,
   .contact-us-right {
     width: 100%; /* Full width */
     margin: 10px 0;
+    padding: 0 20px; /* Equal padding on both sides */
+    box-sizing: border-box; /* Ensure padding is included in width */
   }
 
   .info-type {
-    font-size: 20px; /* Smaller font size */
+    font-size: 18px; /* Smaller font size */
   }
 
   .contacter {
-    font-size: 18px; /* Smaller font size for contact info */
-    padding-left: 20px;
+    font-size: 18px;
+    text-align: center; /* Center the contacter text */
+    padding-left: 0; /* Remove extra padding */
+    margin: 0 auto; /* Center the contacter section */
+    margin-bottom: 30px; /* Add more space below to avoid overlapping footer */
+    width: 100%; /* Ensure it doesn't overflow */
   }
 
   .email-or-form p {
-    margin-bottom: 20px; /* Adjust margin */
+    margin-bottom: 15px; /* Adjust bottom margin */
+  }
+
+  .information {
+    padding: 0 20px; /* Add padding */
+    width: 100%; /* Ensure full width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Adjust box-sizing */
+    margin-bottom: 20px; /* Add space below */
   }
 
   .about-top {
@@ -1214,8 +1295,8 @@
   }
 
   .about-bottom-inside {
-    max-width: 90%; /* Adjust max-width */
-    margin: 0 20px;
+    max-width: 100%; /* Full width */
+    margin: 0 20px; /* More margin to push away from the edges */
   }
 
   .about-bottom-inside p {
@@ -1223,11 +1304,12 @@
   }
 
   .about-bottom-inside ul {
-    padding-left: 40px; /* Adjust padding */
+    padding-left: 10px; /* Adjust padding */
   }
 
   .about-bottom-inside li {
-    padding-bottom: 20px; /* Reduced padding */
+    margin-bottom: 10px; /* Spacing between list items */
+    font-size: 16px; /* Adjust font size */
   }
 
   #about-img {
@@ -1240,12 +1322,13 @@
     padding-top: 50px; /* Adjust padding */
   }
 
-  .about-border {
-    padding-right: 150px; /* Reduced padding */
-  }
+  /* .about-border {
+    padding-right: 150px;
+  } */
 
   .about-positions {
-    padding-left: 15px; /* Reduced padding */
+    padding-left: 5px; /* Significantly reduced padding to move closer to the left edge */
+    padding-right: 5px; /* Significantly reduced padding to move closer to the right edge */
   }
 
   .about-positions header {
@@ -1259,7 +1342,7 @@
 
   .about-positions-description p,
   .about-positions-description li {
-    font-size: 18px; /* Smaller font size */
+    font-size: 16px; /* Adjust font size for readability */
   }
 
   .club-information {
@@ -1275,107 +1358,137 @@
 
   /* Products section */
   .products-header {
-    font-size: 28px; /* Adjust font size */
-    padding-left: 20px; /* Reduced padding */
-    height: 350px; /* Reduced height */
+    font-size: 24px; /* Adjust font size for mobile */
+    padding-left: 15px; /* Reduced padding */
+    height: auto; /* Allow the header to resize */
   }
 
   .products-header p {
-    margin-left: 0; /* Adjust left margin */
-    margin-top: -20px; /* Adjust margin */
+    margin-left: 0; /* Reset margin */
+    margin-top: -10px; /* Adjust margin */
   }
 
   .vsa-merch {
-    width: 400px; /* Adjust width */
+    width: 100%; /* Make the image fill the available width */
     height: auto;
   }
 
   .merch-group {
-    grid-template-columns: 1fr; /* Single column grid for mobile */
+    display: grid;
+    grid-template-columns: 1fr; /* One column grid */
     grid-template-rows: auto;
-    padding-left: 15px;
+    gap: 15px; /* Added gap to prevent overlap */
+    padding-left: 10px; /* Adjust padding */
   }
 
   .merch-img {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; /* Make the image take full width of its container */
+    padding-top: 20px;
   }
 
   .merch-description {
     margin-left: 0;
-    margin-top: -10px;
-    height: 230px; /* Adjust height */
+    margin-top: 10px; /* Adjust spacing */
+    height: auto; /* Allow height to auto-adjust */
   }
 
   .merch-description header {
     font-size: 16px; /* Adjust font size */
-    margin-left: 10px; /* Adjust left margin */
+    margin-left: 10px; /* Adjust margin */
   }
 
   .merch-description h3 {
-    font-size: 20px; /* Adjust font size */
+    font-size: 18px; /* Adjust font size */
     margin-left: 10px;
-    margin-top: -10px;
+    margin-top: 5px; /* Adjust margin */
   }
 
   .merch-description p {
-    margin-top: -20px; /* Adjust margin */
+    margin-top: 10px; /* Adjust margin */
   }
 
   .size-options {
-    gap: 8px; /* Reduced gap */
+    display: flex;
+    justify-content: center; /* Centers the size boxes horizontally */
+    align-items: center; /* Aligns size boxes vertically */
+    gap: 10px; /* Even gap between size options */
+    flex-wrap: nowrap; /* Prevents wrapping to a new row */
+    overflow-x: auto; /* Allows horizontal scrolling if there are too many items */
   }
 
   .size-box {
-    width: 25px; /* Adjust size */
-    height: 25px;
-    font-size: 14px; /* Adjust font size */
+    width: 30px; /* Adjust size */
+    height: 30px;
+    font-size: 16px; /* Adjust font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -30px;
   }
 
   .merch-sale {
-    font-size: 18px; /* Adjust font size */
-    padding-top: 15px;
+    font-size: 16px; /* Adjust font size */
+    padding-top: 10px; /* Adjust padding */
+    padding-left: 10px;
   }
 
   /* Info section */
   .info {
-    grid-template-columns: 1fr; /* Single column grid layout */
-    padding-top: 60px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
   }
 
   .logo-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding-top: 10px; /* Adjust padding */
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
   }
 
   .Logo_2 {
-    max-width: 250px; /* Adjust logo size */
-    width: 100%; /* Make logo responsive */
-    margin-top: 0; /* Reset margin */
+    max-width: 180px;
+    width: 100%;
+    height: auto;
   }
 
   .social-icons {
-    font-size: 2rem; /* Reduced icon size */
-    gap: 8px; /* Reduced gap */
-    margin-top: 15px; /* Adjusted spacing */
+    font-size: 1.5rem;
+    gap: 4px;
+    margin-top: 8px;
+    justify-content: center;
+    display: flex;
   }
 
   .mid-container {
-    padding-top: 30px; /* Reduced padding */
+    padding-top: 15px; /* Adjusted padding */
+    text-align: center; /* Ensure text is centered */
   }
 
   .lower-container {
-    padding-top: 40px; /* Reduced padding */
+    padding-top: 20px; /* Adjusted padding */
+    text-align: center; /* Ensure text is centered */
   }
 
   .hour-description {
-    font-size: 16px; /* Reduced font size */
+    font-size: 12px; /* Smaller font size */
+    margin-top: 10px; /* Adjusted margin */
   }
 
   .map-container {
-    padding-right: 20px; /* Adjusted padding */
+    display: flex;
+    justify-content: center; /* Center the map */
+    align-items: center;
+    padding-right: 0; /* Remove extra padding on the right */
+    width: 90%; /* Scale map to fit smaller screens */
+    max-width: 100%;
   }
 
   .info h3, .info h1, .info p {
@@ -1449,6 +1562,10 @@
     grid-template-columns: 1fr; /* Single column layout for smaller screens */
   }
 
+  .container p {
+    margin-right: 20px;
+  }
+
   .box img {
     width: 100%; /* Make the image responsive */
   }
@@ -1468,6 +1585,7 @@
 
   .subgroup-desc {
     max-width: 100%;
+    margin-right: 20px;
   }
 
   .subgroup header.subgroup-title {
@@ -1475,7 +1593,7 @@
   }
 }
 
-/* HERE */
+/*--------------------------------------------------------------------------------------------------------------------------*/
 
 /* For mobile devices (screen width 480px or smaller) */
 @media screen and (max-width: 480px) {
@@ -1522,7 +1640,7 @@
   .collapse-box {
     width: 95%; /* Expand to almost full width */
     margin: 15px auto; /* Center align */
-    padding: 10px;
+    padding: 10px 10px;
   }
 
   .toggle {
@@ -1536,6 +1654,12 @@
   }
 
   /* New sections */
+  .content, .content-5 {
+    margin-right: 15px;
+    max-width: 85%;
+    box-sizing: border-box;
+  }
+
   .content p {
     font-size: 14px; /* Smaller paragraph size for mobile */
   }
@@ -1544,6 +1668,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 15px;
   }
 
   .content ul {
@@ -1562,6 +1687,7 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    margin-left: -18px;
   }
 
   .clickable-slides img {
@@ -1735,8 +1861,8 @@
   }
 
   .about-bottom-inside {
-    max-width: 95%; /* Adjust max-width */
-    margin: 0 10px;
+    max-width: 100%; /* Full width */
+    margin: 0 15px; /* More margin to push away from the edges */
   }
 
   .about-bottom-inside p {
@@ -1744,11 +1870,12 @@
   }
 
   .about-bottom-inside ul {
-    padding-left: 20px; /* Adjust padding */
+    padding-left: 5px; /* Adjust padding */
   }
 
   .about-bottom-inside li {
-    padding-bottom: 15px; /* Reduced padding */
+    margin-bottom: 8px; /* Reduce space between items */
+    font-size: 14px; /* Adjust font size */
   }
 
   #about-img {
@@ -1761,12 +1888,13 @@
     padding-top: 40px; /* Adjust padding */
   }
 
-  .about-border {
-    padding-right: 100px; /* Further reduced padding */
-  }
+  /* .about-border {
+    padding-right: 100px;
+  } */
 
   .about-positions {
-    padding-left: 10px; /* Reduced padding */
+    padding-left: 5px; /* Even less padding on the left */
+    padding-right: 5px; /* Less padding on the right */
   }
 
   .about-positions header {
@@ -1780,7 +1908,7 @@
 
   .about-positions-description p,
   .about-positions-description li {
-    font-size: 16px; /* Smaller font size */
+    font-size: 14px; /* Adjust font size for smaller screens */
   }
 
   .club-information {
@@ -1796,99 +1924,133 @@
 
    /* Products section */
    .products-header {
-    font-size: 22px; /* Further reduced font size */
-    padding-left: 10px; /* Minimal padding */
-    height: 300px; /* Adjust height */
+    font-size: 22px; /* Adjust font size */
+    padding-left: 10px; /* Further reduced padding */
+    height: auto;
   }
 
   .products-header p {
-    margin-left: 0; /* Remove margin */
-    margin-top: 0; /* Reset margin */
+    margin-left: 0;
+    margin-top: -10px;
   }
 
   .vsa-merch {
-    width: 100%; /* Full width for mobile */
+    width: 100%; /* Full width */
+    height: auto;
   }
 
   .merch-group {
-    grid-template-columns: 1fr; /* One column layout */
-    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column grid */
+    gap: 10px; /* Adjusted gap */
+    padding-left: 5px; /* Adjust padding */
   }
 
   .merch-img {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; /* Full width */
+    padding-top: 15px;
   }
 
   .merch-description {
     margin-left: 0;
-    margin-top: -10px;
-    height: 200px; /* Adjust height */
+    margin-top: 5px; /* Adjust margin */
+    height: auto;
   }
 
   .merch-description header {
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px; /* Adjust font size */
+    margin-left: 5px; /* Adjust margin */
   }
 
   .merch-description h3 {
-    font-size: 18px; /* Smaller font size */
+    font-size: 16px; /* Adjust font size */
+    margin-left: 5px;
+    margin-top: 5px;
   }
 
   .merch-description p {
-    margin-top: -10px;
+    margin-top: 5px;
   }
 
   .size-options {
-    gap: 6px; /* Smaller gap */
+    display: flex;
+    justify-content: center; /* Centers the size boxes */
+    align-items: center; /* Aligns size boxes vertically */
+    gap: 8px; /* Reduced gap */
+    flex-wrap: wrap; /* Wrap if space is tight */
   }
 
   .size-box {
-    width: 22px; /* Smaller size */
-    height: 22px;
-    font-size: 12px; /* Smaller font size */
+    width: 25px; /* Adjust size */
+    height: 25px;
+    font-size: 14px; /* Adjust font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -25px;
   }
 
   .merch-sale {
-    font-size: 16px; /* Smaller font size */
-    padding-top: 10px;
+    font-size: 14px; /* Adjust font size */
+    padding-top: 8px;
   }
 
   /* Info section */
   .info {
-    grid-template-columns: 1fr; /* Single column grid layout */
-    padding-top: 40px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
   }
 
   .logo-container {
-    padding-top: 5px; /* Adjust padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
   }
 
   .Logo_2 {
-    max-width: 200px; /* Further reduced logo size */
-    width: 100%; /* Make logo responsive */
+    max-width: 150px;
+    width: 100%;
+    height: auto;
   }
 
   .social-icons {
-    font-size: 1.5rem; /* Further reduced icon size */
-    gap: 6px; /* Smaller gap */
-    margin-top: 10px; /* Adjusted spacing */
+    font-size: 1.2rem;
+    gap: 4px;
+    margin-top: 8px;
+    justify-content: center;
+    display: flex;
   }
 
   .mid-container {
-    padding-top: 20px; /* Reduced padding */
+    padding-top: 10px; /* Adjusted padding */
+    text-align: center; /* Ensure text is centered */
   }
 
   .lower-container {
-    padding-top: 25px; /* Reduced padding */
+    padding-top: 15px; /* Adjusted padding */
+    text-align: center; /* Ensure text is centered */
   }
 
   .hour-description {
-    font-size: 14px; /* Further reduced font size */
+    font-size: 12px; /* Smaller font size */
+    margin-top: 10px; /* Adjusted margin */
   }
 
   .map-container {
-    padding-right: 10px; /* Adjusted padding */
+    padding-right: 5px; /* Adjusted padding */
+    width: 80%; /* Scale map to fit smaller screen */
+    max-width: 100%;
+    padding-right: 0;
+    justify-content: center; /* Ensure map is centered */
   }
 
   .info h3, .info h1, .info p {
@@ -1949,6 +2111,10 @@
     grid-template-columns: 1fr; /* Stack items for mobile */
   }
 
+  .container p {
+    margin-right: 15px;
+  }
+
   .box img {
     width: 100%; /* Ensure images are responsive */
   }
@@ -1974,7 +2140,7 @@
   }
 }
 
-/*HERE*/
+/*----------------------------------------------------------------------------------------------------------------------------*/
 
 /* For tiny devices (screen width 320px or smaller) */
 @media screen and (max-width: 320px) {
@@ -2006,7 +2172,7 @@
   .collapse-box {
     width: 100%; /* Full width collapse box */
     margin: 10px auto;
-    padding: 5px;
+    padding: 10px 5px;
   }
 
   .toggle {
@@ -2020,6 +2186,12 @@
   }
 
   /* New sections */
+  .content, .content-5 {
+    margin-right: 10px;
+    max-width: 80%;
+    box-sizing: border-box;
+  }
+
   .content p {
     font-size: 12px; /* Small text size on tiny devices */
   }
@@ -2028,6 +2200,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
   }
 
   .content ul {
@@ -2046,6 +2219,7 @@
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    margin-left: -14px;
   }
 
   .clickable-slides img {
@@ -2218,8 +2392,8 @@
   }
 
   .about-bottom-inside {
-    max-width: 90%; /* Adjust max-width */
-    margin: 0 5px;
+    max-width: 100%; /* Full width */
+    margin: 0 10px; /* More margin to push away from the edges */
   }
 
   .about-bottom-inside p {
@@ -2227,11 +2401,12 @@
   }
 
   .about-bottom-inside ul {
-    padding-left: 10px; /* Adjust padding */
+    padding-left: 3px; /* Adjust padding */
   }
 
   .about-bottom-inside li {
-    padding-bottom: 10px; /* Reduced padding */
+    margin-bottom: 5px; /* Tight space between list items */
+    font-size: 12px; /* Smaller font size for smaller screens */
   }
 
   #about-img {
@@ -2244,12 +2419,13 @@
     padding-top: 30px; /* Adjust padding */
   }
 
-  .about-border {
-    padding-right: 50px; /* Minimal padding */
-  }
+  /* .about-border {
+    padding-right: 50px;
+  } */
 
   .about-positions {
-    padding-left: 5px; /* Reduced padding */
+    padding-left: 3px; /* Minimal padding on the left */
+    padding-right: 3px; /* Minimal padding on the right */
   }
 
   .about-positions header {
@@ -2263,7 +2439,7 @@
 
   .about-positions-description p,
   .about-positions-description li {
-    font-size: 14px; /* Very small font size */
+    font-size: 12px; /* Adjust font size for very small screens */
   }
 
   .club-information {
@@ -2279,98 +2455,132 @@
 
   /* Products section */
   .products-header {
-    font-size: 18px; /* Very small font size */
-    padding-left: 5px; /* Minimal padding */
-    height: 250px; /* Further reduced height */
+    font-size: 20px; /* Adjust font size for very small screens */
+    padding-left: 5px; /* Further reduced padding */
+    height: auto;
   }
 
   .products-header p {
-    margin-left: 0; /* Reset margin */
-    margin-top: 0; /* Reset margin */
+    margin-left: 0;
+    margin-top: -5px;
   }
 
   .vsa-merch {
-    width: 100%; /* Full width for tiny devices */
+    width: 100%; /* Full width */
+    height: auto;
   }
 
   .merch-group {
-    grid-template-columns: 1fr; /* Single column layout */
-    padding-left: 5px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column grid */
+    gap: 8px; /* Adjusted gap */
+    padding-left: 0; /* Remove padding */
   }
 
   .merch-img {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%; /* Full width */
   }
 
   .merch-description {
     margin-left: 0;
-    margin-top: -5px;
-    height: 180px; /* Further reduce height */
+    margin-top: 5px; /* Adjust margin */
+    height: auto;
   }
 
   .merch-description header {
-    font-size: 12px; /* Very small font size */
+    font-size: 12px; /* Adjust font size */
+    margin-left: 5px;
   }
 
   .merch-description h3 {
-    font-size: 16px; /* Very small font size */
+    font-size: 14px; /* Adjust font size */
+    margin-left: 5px;
+    margin-top: 5px;
   }
 
   .merch-description p {
-    margin-top: -5px;
+    margin-top: 5px;
   }
 
   .size-options {
-    gap: 4px; /* Reduced gap */
+    display: flex;
+    justify-content: center; /* Center size options */
+    align-items: center; /* Align items */
+    gap: 6px; /* Reduced gap */
+    flex-wrap: wrap; /* Wraps size boxes */
   }
 
   .size-box {
-    width: 18px; /* Very small size */
-    height: 18px;
-    font-size: 10px; /* Very small font size */
+    width: 20px; /* Smaller size */
+    height: 20px;
+    font-size: 12px; /* Adjust font size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .merch-sale {
-    font-size: 14px; /* Very small font size */
+    font-size: 12px; /* Adjust font size */
     padding-top: 5px;
   }
 
   /* Info section */
   .info {
-    grid-template-columns: 1fr; /* Single column grid layout */
-    padding-top: 30px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    text-align: center;
   }
 
   .logo-container {
-    padding-top: 3px; /* Adjust padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+
   }
 
   .Logo_2 {
-    max-width: 180px; /* Very small logo size */
+    max-width: 120px;
+    width: 100%;
+    height: auto;
   }
 
   .social-icons {
-    font-size: 1.2rem; /* Very small icon size */
-    gap: 4px; /* Very small gap */
-    margin-top: 8px; /* Adjusted spacing */
+    font-size: 1rem;
+    gap: 4px;
+    margin-top: 8px;
+    justify-content: center;
+    display: flex;
   }
 
   .mid-container {
-    padding-top: 15px; /* Reduced padding */
+    padding-top: 8px; /* Adjusted padding */
+    text-align: center; /* Ensure text is centered */
   }
 
   .lower-container {
-    padding-top: 20px; /* Reduced padding */
+    padding-top: 10px; /* Adjusted padding */
+    text-align: center; /* Ensure text is centered */
   }
 
   .hour-description {
-    font-size: 12px; /* Smaller font size */
+    font-size: 10px; /* Smaller font size */
+    margin-top: 8px; /* Adjusted margin */
   }
 
   .map-container {
     padding-right: 5px; /* Adjusted padding */
+    width: 90%; /* Make map take more space */
+    max-width: 100%;
+    padding-right: 0;
+    justify-content: center; /* Ensure map is centered */
   }
 
   .info h3, .info h1, .info p {
@@ -2429,6 +2639,10 @@
 
   .container {
     grid-template-columns: 1fr; /* Stack items for smaller devices */
+  }
+
+  .container p {
+    margin-right: 10px;
   }
 
   .box img {
